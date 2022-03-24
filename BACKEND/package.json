@@ -1,0 +1,27 @@
+{
+  "name": "hrbackend",
+  "version": "1.0.0",
+  "description": "backend for hr managment software",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "author": "abdullah tilal khan,sadeem sattar,salman ahmed",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.18.1",
+    "nodemailer": "^6.7.2"
+  },
+  "devDependencies": {
+    "jest": "^27.4.3",
+    "nodemon": "^2.0.13"
+  }
+}

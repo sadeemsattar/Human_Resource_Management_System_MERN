@@ -1,0 +1,53 @@
+table {
+  padding: 50px;
+  background-color: #e3f2fd;
+}
+table tr td {
+  align-items: center;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 10px;
+  width: 200px;
+}
+
+table tr td input {
+  padding: 10px;
+  font-size: 16px;
+  margin: 10px;
+  align-items: center;
+}
+table tr td select {
+  padding: 10px;
+  font-size: 16px;
+  margin: 10px;
+  width: 220px;
+  align-items: center;
+}
+table tr td textarea {
+  padding: 10px;
+  font-size: 16px;
+  margin: 10px;
+}
+
+table tr td .btnAlert {
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+  margin-left: 40px;
+  background-color: #ffe57f;
+  border: none;
+}
+table tr td .btnSuccess {
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+  margin-left: 25px;
+  background-color: #b9f6ca;
+  border: none;
+}
+table tr td .btnSuccess:hover {
+  background-color: #00c853;
+}
+table tr td .btnAlert:hover {
+  background-color: #ffc107;
+}
