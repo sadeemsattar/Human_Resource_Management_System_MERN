@@ -1,18 +1,13 @@
+// Restricts QR attendance marking to clients on the organization's network:
+// the request IP must match ORG_IP (the organization's public/gateway IP).
 const verifyIp = (req, res, next) => {
-  console.log(req);
-  //   if (req.id[0] === "a" && req.loginAs === "Admin") {
-  //     // console.log(req.admin, req);
-  //     return next();
-  //   } else {
-  //     res.status(400).json({ status: "falied", message: "access is restricted" });
-  //   }
-  var ip = req.header("x-forwarded-for") || req.socket.remoteAddress;
-  if (ip.toString() === "128.0.0.1") {
+  const ip = req.header("x-forwarded-for") || req.socket.remoteAddress;
+  if (ip.toString() === process.env.ORG_IP) {
     next();
   } else {
     return res
       .status(404)
-      .json({ status: "falied", message: "access is restricted" });
+      .json({ status: "failed", message: "access is restricted" });
   }
 };
 

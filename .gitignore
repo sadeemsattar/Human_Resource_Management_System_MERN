@@ -1,0 +1,13 @@
+# OS
+.DS_Store
+
+# Dependencies
+node_modules/
+
+# Environment files (real values live only locally)
+.env
+config.env
+
+# Build output
+frontend/build/
+backend/build/

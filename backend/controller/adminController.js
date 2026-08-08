@@ -98,12 +98,12 @@ exports.addHr = (req, res, next) => {
           var transporter = nodemailer.createTransport({
             service: "gmail",
             auth: {
-              user: "sas.official.hr@gmail.com",
-              pass: "Sas12345",
+              user: process.env.SMTP_USER,
+              pass: process.env.SMTP_PASS,
             },
           });
           const options = {
-            from: "sas.official.hr@gmail.com",
+            from: process.env.SMTP_USER,
             to: email,
             subject: "Congragulations,You have been Hired on Hr Position",
             text: `Congragulations Mr/Ms ${firstName} ${lastName}! You have been hired as Hr in our company.For the portal access your email is: ${email} and password is: ${password}`,
