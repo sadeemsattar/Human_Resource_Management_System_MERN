@@ -120,11 +120,12 @@ but is not production-grade:
 - **SQL injection**: most controller queries build SQL by string
   concatenation of request values (only the login query is parameterized).
   Do not expose this backend to untrusted input.
-- **Old toolchain**: Create React App 4 / React 17 will not build on current
-  Node versions (fails on Node 17+ due to OpenSSL changes; use Node 14–16,
-  e.g. via `nvm`, to run the frontend). Backend dependencies (Express 4,
-  bcrypt 5) are similarly dated. Install/build was not re-verified on
-  modern Node — the commands above are the intended usage.
+- **Old frontend toolchain**: Create React App 4 / React 17 will not build
+  on current Node versions (fails on Node 17+ due to OpenSSL changes; use
+  Node 14–16, e.g. via `nvm`, to run the frontend). The frontend build was
+  not re-verified — its commands above are the intended usage. The backend
+  was verified to install and boot on Node 26 after upgrading
+  `jsonwebtoken` to v9 (v8 depended on the removed `SlowBuffer` API).
 - The frontend API base URL (`http://localhost:5000`) is hardcoded across
   components rather than configured in one place.
 - No automated tests (jest is configured but no test suites exist; manual

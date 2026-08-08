@@ -40,6 +40,6 @@ app.use("/hr", validateToken, verifyHr, hrRoute);
 app.use("/employee", validateToken, verifyEmployee, employeeRoute);
 
 app.use("*", (req, res) => {
-  res.status(404).send("404 page not founf");
+  res.status(404).send("404 page not found");
 });
 module.exports = app;
